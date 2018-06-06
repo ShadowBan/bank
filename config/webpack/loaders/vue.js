@@ -1,3 +1,5 @@
+var ExtractTextPlugin = require("extract-text-webpack-plugin")
+
 const { dev_server: devServer } = require('@rails/webpacker').config
 
 const isProduction = process.env.NODE_ENV === 'production'

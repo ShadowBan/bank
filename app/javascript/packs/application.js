@@ -7,5 +7,19 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-console.log('Hello World from Webpacker')
-import './hello_vue'
+import Vue from 'vue/dist/vue.esm'
+import VueMaterial from 'vue-material'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+import TestComponent from '../components/test-component.vue'
+import TodoList from '../components/todo-list.vue'
+
+//Vue.use(VueMaterial)
+Vue.use(VueAxios, axios)
+
+
+new Vue({
+  el: '#app',
+  components: { TestComponent, TodoList }
+})
